@@ -1,0 +1,134 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.images .img {
+  width: 54rem;
+  height: 67.5rem;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin-bottom: 2rem;
+
+  cursor: pointer;
+}
+
+.images .img .mask {
+  display: grid;
+  width: 54rem;
+  height: 67.5rem;
+
+  position: absolute;
+
+  background-color: #00000000;
+}
+
+.images .img .mask p {
+  font: bold 100px sans-serif;
+  line-height: 0.6;
+  color: #fff;
+}
+
+.text-frase input {
+  background-color: #e4e4e4;
+
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+
+  outline: none;
+}
+
+button {
+  background-color: #2c4feb;
+  color: #fff;
+
+  font-size: 1.6rem;
+
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+
+  outline: none;
+}
+
+button:hover {
+  background-color: #3a5beb;
+}
+
+.text-frase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+textarea {
+  width: 54rem;
+  height: 7.7rem;
+
+  padding: 1rem;
+  border-radius: 4px;
+
+  outline: none;
+  resize: none;
+
+  background-color: #e4e4e4;
+}
+
+.config {
+  display: grid;
+  place-items: center;
+}
+
+.config > div {
+  margin-bottom: 2rem;
+}
+
+.config select {
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 1rem;
+
+  outline: none;
+}
+
+.config span {
+  font: normal 1.7rem sans-serif;
+
+  margin-right: 1rem;
+}
+
+.config input[type='number'] {
+  background-color: #e4e4e4;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+
+  outline: none;
+}
+
+.config .bg-overlay div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

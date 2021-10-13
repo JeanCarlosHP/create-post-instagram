@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-frase">
+        <textarea id="text" placeholder="Informe a frase"></textarea>
+        <div>
+          <input class="image-search" type="text" placeholder="Informe o tema" />
+          <button id="search">Pesquisar Imagem</button>
+        </div>
+      </div>
+
+      <div class="config">
+        <div>
+          <span>Posição do texto</span>
+          <select id="text-position">
+            <option value="superiorEsquerdo">Canto superior esquerdo</option>
+            <option value="superiorCentro">Centro superior</option>
+            <option value="superiorDireito">Canto superior direito</option>
+            <option value="centroEsquerdo">Centro esquerdo</option>
+            <option value="centro">Centro</option>
+            <option value="centroDireito">Centro direito</option>
+            <option value="inferiorEsquerdo">Canto inferior esquerdo</option>
+            <option value="inferiorCentro">Centro inferior</option>
+            <option value="inferiorDireito">Canto inferior direito</option>
+          </select>
+        </div>
+
+        <div class="bg-overlay">
+          <div>
+            <span>Cor de sobreposição</span>
+            <input id="mask-color" type="color" />
+          </div>
+
+          <div>
+            <span>Opacidade</span>
+            <input id="mask-opacity" type="range" value="0" />
+          </div>
+        </div>
+
+        <div class="text-adjust">
+          <div>
+            <span>Cor do texto</span>
+            <input id="text-color" type="color" />
+          </div>
+
+          <div>
+            <span>Tamanho da fonte</span>
+            <input id="text-font-size" type="range" value="100" min="50" max="500" />
+          </div>
+
+          <div>
+            <span>Distanciamento entre linhas</span>
+            <input id="text-line-height" type="range" value="6" min="6" max="15" />
+          </div>
+        </div>
+
+        <div><input id="file-image" type="file" /></div>
+      </div>
+    </div>
+
+    <div class="images"></div>
+
+    <script src="./src/index.js"></script>
+    <script src="./src/text_position.js" defer type="module"></script>
+    <script src="./src/mask.js"></script>
+    <script src="./src/text_adjust.js"></script>
+    <script src="./src/load_file_image.js"></script>
+    <script src="./src/html2canvas.js" /></script>
+  </body>
+</html>
