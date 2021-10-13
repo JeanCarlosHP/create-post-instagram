@@ -2,7 +2,7 @@
 let images = document.querySelector('.images')
 
 search.addEventListener('click', () => {
-  const text = document.querySelector('#text').value
+  const text = document.querySelector('#textarea').value
   const imageSearch = document.querySelector('.image-search').value
 
   getImageAPI(imageSearch, text)

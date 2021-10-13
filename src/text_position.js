@@ -1,9 +1,22 @@
 ﻿const select = document.querySelector('#text-position')
+const search = document.querySelector('#search')
 
-select.addEventListener('change', e => {
-  const option = e.target.value
+select.addEventListener('change', setPosition)
+search.addEventListener('click', setPosition)
+
+function setPosition() {
   const masks = document.querySelectorAll('.images .img .mask')
+  const selectValue = document.querySelector('#text-position')
+  const option = selectValue.value
+  console.log(option)
 
+  for (let mask of masks) {
+    const position = getPositionSelect(option)
+    mask.style.placeItems = position
+  }
+}
+
+function getPositionSelect(option) {
   const options = {
     superiorEsquerdo: {
       position: 'start start'
@@ -42,8 +55,5 @@ select.addEventListener('change', e => {
     }
   }
 
-  for (let mask of masks) {
-    const position = options[option].position
-    mask.style.placeItems = position
-  }
-})
+  return options[option].position
+}

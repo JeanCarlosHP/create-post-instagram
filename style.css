@@ -31,6 +31,7 @@ html {
 
 .images .img .mask {
   display: grid;
+  
   width: 54rem;
   height: 67.5rem;
 
